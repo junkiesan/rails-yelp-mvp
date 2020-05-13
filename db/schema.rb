@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 2020_05_13_133713) do
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "restaurants_id"
-    t.index ["restaurants_id"], name: "index_reviews_on_restaurants_id"
+    t.integer "restaurant_id"
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
   end
 
-  add_foreign_key "reviews", "restaurants", column: "restaurants_id"
+  add_foreign_key "reviews", "restaurants"
 end
